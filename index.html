@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trò chơi Sinh học - Bài 13</title>
+
+    <!-- FONT BE VIETNAM PRO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <!-- =========================
+             TIÊU ĐỀ
+        ========================== -->
+
+        <h1>
+            🧬 TRÒ CHƠI SINH HỌC – BÀI 13
+        </h1>
+
+        <p class="subtitle">
+            Khái quát về chuyển hoá vật chất và năng lượng
+        </p>
+
+
+        <!-- =========================
+             BẢNG ĐIỂM
+        ========================== -->
+
+        <div class="score-board">
+
+            <div>
+                🟢 NHÓM 1:
+                <span id="score1">0</span>/5
+            </div>
+
+            <div>
+                🔵 NHÓM 2:
+                <span id="score2">0</span>/5
+            </div>
+
+            <div>
+                🟠 NHÓM 3:
+                <span id="score3">0</span>/5
+            </div>
+
+            <div>
+                🟣 NHÓM 4:
+                <span id="score4">0</span>/5
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             BẢN ĐỒ THỬ THÁCH
+        ========================== -->
+
+        <h2>
+            🗺️ BẢN ĐỒ THỬ THÁCH
+        </h2>
+
+        <p class="map-description">
+
+            Mỗi nhóm được tự do lựa chọn một thử thách.
+            Mỗi trò chỉ được chơi một lần.
+
+        </p>
+
+
+        <div class="game-map">
+
+
+            <!-- TRÒ 1 -->
+
+            <button
+                class="game-card game-1"
+                onclick="selectGame(1)"
+                id="game-card-1"
+                type="button">
+
+                <div class="game-icon">
+                    🧩
+                </div>
+
+                <div class="game-title">
+                    GIẢI CỨU SƠ ĐỒ
+                </div>
+
+                <div class="game-description">
+                    Sắp xếp và kết nối kiến thức
+                </div>
+
+                <div
+                    class="game-status"
+                    id="status-1">
+
+                    CHƯA CHƠI
+
+                </div>
+
+            </button>
+
+
+            <!-- TRÒ 2 -->
+
+            <button
+                class="game-card game-2"
+                onclick="selectGame(2)"
+                id="game-card-2"
+                type="button">
+
+                <div class="game-icon">
+                    🔎
+                </div>
+
+                <div class="game-title">
+                    BẮT LỖI SINH HỌC
+                </div>
+
+                <div class="game-description">
+                    Tìm và sửa lỗi kiến thức
+                </div>
+
+                <div
+                    class="game-status"
+                    id="status-2">
+
+                    CHƯA CHƠI
+
+                </div>
+
+            </button>
+
+
+            <!-- TRÒ 3 -->
+
+            <button
+                class="game-card game-3"
+                onclick="selectGame(3)"
+                id="game-card-3"
+                type="button">
+
+                <div class="game-icon">
+                    🔐
+                </div>
+
+                <div class="game-title">
+                    GIẢI MÃ BÍ MẬT
+                </div>
+
+                <div class="game-description">
+                    Giải câu hỏi để tìm từ khoá
+                </div>
+
+                <div
+                    class="game-status"
+                    id="status-3">
+
+                    CHƯA CHƠI
+
+                </div>
+
+            </button>
+
+
+            <!-- TRÒ 4 -->
+
+            <button
+                class="game-card game-4"
+                onclick="selectGame(4)"
+                id="game-card-4"
+                type="button">
+
+                <div class="game-icon">
+                    🧠
+                </div>
+
+                <div class="game-title">
+                    NHIỆM VỤ SINH HỌC
+                </div>
+
+                <div class="game-description">
+                    Vận dụng kiến thức vào tình huống
+                </div>
+
+                <div
+                    class="game-status"
+                    id="status-4">
+
+                    CHƯA CHƠI
+
+                </div>
+
+            </button>
+
+
+        </div>
+
+
+        <!-- =========================
+             KHU VỰC GAME
+        ========================== -->
+
+        <div id="game-area">
+
+            <p>
+                👆 Hãy chọn một thử thách để bắt đầu!
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             KẾT QUẢ
+        ========================== -->
+
+        <div id="result-area"></div>
+
+
+    </div>
+
+
+    <!-- =========================
+         BẢNG XẾP HẠNG NHỎ
+         NẰM Ở GÓC PHẢI
+    ========================== -->
+
+    <aside
+        id="home-leaderboard"
+        aria-label="Bảng xếp hạng">
+    </aside>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="game.js"></script>
+
+
+</body>
+
+</html>
